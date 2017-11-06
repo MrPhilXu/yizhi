@@ -1,1 +1,0 @@
-/home/cangye/yizhi/yizhi/urls.py

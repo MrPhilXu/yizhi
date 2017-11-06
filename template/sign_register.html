@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container" id="particles-js" >
+
+    <div class="login" >
+        <div class="login-screen">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#sign" aria-controls="sign" role="tab" data-toggle="tab">登陆</a></li>
+                <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">注册</a></li>
+
+            </ul>
+            <hr>
+            <div class="login-form tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="sign">
+                <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="用户名/邮箱" id="login-name">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+
+                <div class="control-group">
+                    <input type="password" class="login-field" value="" placeholder="密码" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">下次自动登录
+                    </label>
+                </div>
+                <a class="btn btn-primary btn-large btn-block" href="#">确 定</a>
+                <a class="login-link" href="#">忘记密码?</a>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="register">
+                    <div class="control-group">
+                    <input type="text" class="login-field" value="" placeholder="请输入用户名" id="register-name">
+                    <label class="login-field-icon fui-user" for="register-name"></label>
+                </div>
+                    <div class="control-group">
+                        <input type="email" class="login-field" value="" placeholder="请输入邮箱" id="e-mail">
+                        <label class="login-field-icon fui-user" for="e-mail"></label>
+
+                    </div>
+                    <div class="control-group">
+                        <input type="password" class="login-field" value="" placeholder="请输入密码（不少于6位）" id="register-pass">
+                        <label class="login-field-icon fui-lock" for="register-pass"></label>
+
+                    </div>
+
+                    <a class="btn btn-primary btn-large btn-block" href="#">创建用户</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
