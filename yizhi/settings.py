@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+AUTHENTICATION_BACKENDS=(
+    'login.views.CustomBackend',)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'login',
+    'xadmin',
+    'crispy_forms',
+    #'reversion',
+    'captcha',
+    'utils',
+   
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -51,6 +60,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'yizhi.urls'
+AUTH_USER_MODEL = "login.UserProfile"
 
 TEMPLATES = [
     {

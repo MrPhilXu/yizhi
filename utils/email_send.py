@@ -1,7 +1,7 @@
 # -*-coding:utf-8 -*-
-from account.models import EmailVerifyRecord
+from login.models import EmailVerifyRecord
 from django.core.mail import send_mail
-from dujing.settings import EMAIL_FROM
+from yizhi.settings import EMAIL_FROM
 from random import Random
 
 def send_register_email(email,send_type="register"):

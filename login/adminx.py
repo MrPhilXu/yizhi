@@ -11,8 +11,8 @@ class BaseSetting(object):
 	use_bootswatch = True
 
 class GlobalSettings(object):
-	site_title = u"独景后台管理系统"
-	site_footer = u"独景网"
+	site_title = u"后台管理系统"
+	site_footer = u""
 	menu_style = "accordion"
 
 
@@ -28,7 +28,7 @@ class EmailVerifyRecordAdmin(object):
 	list_filter = ['code','send_type','send_time']
 
 
-
+xadmin.site.unregister(UserProfile)
 xadmin.site.register(UserProfile,UserProfileAdmin)
 xadmin.site.register(EmailVerifyRecord,EmailVerifyRecordAdmin)
 xadmin.site.register(views.BaseAdminView,BaseSetting)

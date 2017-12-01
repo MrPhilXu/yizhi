@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="/static/css/animate.css" rel="stylesheet" >
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-pull-leftuid">
+            <div class="row">
+                <div class="col-sm-offset-3">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-navbar">
+                            <span class="sr-only">Togggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">线上科技成果交易平台</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="demo-navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="{% url 'index' %}">首页</a></li>
+                            <li><a href="{% url 'categories' %}">成果转移</a></li>
+                            <li><a href="#">新闻中心</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li>
+
+
+                                <div class="search d6">
+                                    <form>
+                                        <input type="text" placeholder="搜索从这里开始...">
+                                        <button type="submit"></button>
+                                    </form>
+                                </div>
+
+                            </li>
+                            <li><a href="#" type="button" >
+                                <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+                                <span class="badge quantity"></span>
+                            </a></li>
+                            <li>
+                                <a href="{% url 'login' %}" type="button" >
+                                    登录
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'register' %}" type="button" >
+                                    注册
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div><!-- col-sm -->
+            </div><!--  row -->
+        </div><!-- contaioner -->
+    </nav>
+</div>
+
+
+<div class="container-pull-leftuid">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+            <div class="row">
+                <h1 class="pull-left breadcrumb">
+                    <span class="fa fa-cart-plus fa-2x" aria-hidden="true"></span>
+                    购物车
+                </h1>
+                <!--搜索框-->
+                <form class="form-inline breadcrumb">
+
+                    <div class="row search pull-right">
+                        <label class="sr-only" for="search">search</label>
+                        <input type="text" class="form-control" id="search">
+                        <button type="submit" class="btn btn-primary">搜索</button>
+                    </div>
+
+                </form>
+                <!--搜索框结束-->
+            </div>
+
+
+            <!-- 编辑 -->
+            <div class="generations_box row">
+                <div class="col-lg-2">
+                    <form>
+                        <input class="checkbox_all  pull-left" type="checkbox" title="全选">全选
+                    </form>
+                </div>
+
+                <div class=" col-lg-3">
+                    <p>成果信息</p>
+                </div>
+                <div class="col-lg-3 aa">
+                    <p>编号</p>
+                </div>
+                <div class="col-lg-3">
+                    <p>金额</p>
+                </div>
+                <span class="the_editor pull-right">编辑</span>
+            </div>
+
+
+
+
+
+            <div class="goods_boxs row panel panel-default">
+                <div class="panel-body goods_parameter">
+                    <div class="col-lg-1">
+                        <input class="checkbox_child pull-left" type="checkbox" title="选择">
+                    </div>
+
+
+
+                    <div class="col-lg-4">
+
+                        <div class="pull-left">
+                            <div class="col-lg-5">
+                                <img src="/static/img/mindbeagle.jpg" alt="MindBeagle">
+                            </div>
+                            <div class="col-lg-7">
+                                <p><a href="#">"MindBeagle" 脑机接口系统</a></p>
+                                <span class="label label-info">人工智能</span>
+                                <span class="label label-success">医学</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <p>AT10022017136</p>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="color_rgba pull-left">￥</i>
+                        <i class="c_unitprice pull-left">5.0</i>
+                    </div>
+                </div>
+
+                <!-- 删除按钮 -->
+                <div class="goods_delete pull-right">删除</div>
+
+            </div>
+
+            <div class="goods_boxs row panel panel-default">
+                <div class="panel-body goods_parameter">
+                    <div class="col-lg-1">
+                        <input class="checkbox_child pull-left" type="checkbox" title="选择">
+                    </div>
+
+
+
+                    <div class="col-lg-4">
+
+                        <div class="pull-left">
+                            <div class="col-lg-5">
+                                <img src="/static/img/mindbeagle.jpg" alt="MindBeagle">
+                            </div>
+                            <div class="col-lg-7">
+                                <p><a href="#">"MindBeagle" 脑机接口系统</a></p>
+                                <span class="label label-info">人工智能</span>
+                                <span class="label label-success">医学</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <p>AT10022017136</p>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="color_rgba pull-left">￥</i>
+                        <i class="c_unitprice pull-left">6.0</i>
+                    </div>
+                </div>
+
+                <!-- 删除按钮 -->
+                <div class="goods_delete pull-right">删除</div>
+
+            </div>
+
+            <div class="goods_boxs row panel panel-default">
+                <div class="panel-body goods_parameter">
+                    <div class="col-lg-1">
+                        <input class="checkbox_child pull-left" type="checkbox" title="选择">
+                    </div>
+
+
+
+                    <div class="col-lg-4">
+
+                        <div class="pull-left">
+                            <div class="col-lg-5">
+                                <img src="/static/img/mindbeagle.jpg" alt="MindBeagle">
+                            </div>
+                            <div class="col-lg-7">
+                                <p><a href="#">"MindBeagle" 脑机接口系统</a></p>
+                                <span class="label label-info">人工智能</span>
+                                <span class="label label-success">医学</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <p>AT10022017136</p>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="color_rgba pull-left">￥</i>
+                        <i class="c_unitprice pull-left">7.0</i>
+                    </div>
+                </div>
+
+                <!-- 删除按钮 -->
+                <div class="goods_delete pull-right">删除</div>
+
+            </div>
+
+            <div class="goods_boxs row panel panel-default">
+                <div class="panel-body goods_parameter">
+                    <div class="col-lg-1">
+                        <input class="checkbox_child pull-left" type="checkbox" title="选择">
+                    </div>
+
+
+
+                    <div class="col-lg-4">
+
+                        <div class="pull-left">
+                            <div class="col-lg-5">
+                                <img src="/static/img/mindbeagle.jpg" alt="MindBeagle">
+                            </div>
+                            <div class="col-lg-7">
+                                <p><a href="#">"MindBeagle" 脑机接口系统</a></p>
+                                <span class="label label-info">人工智能</span>
+                                <span class="label label-success">医学</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <p>AT10022017136</p>
+                    </div>
+                    <div class="col-lg-1">
+                        <i class="color_rgba pull-left">￥</i>
+                        <i class="c_unitprice pull-left">8.0</i>
+                    </div>
+                </div>
+
+                <!-- 删除按钮 -->
+                <div class="goods_delete pull-right">删除</div>
+
+            </div>
+
+
+
+
+
+            <!-- 总计 去结算 -->
+            <div class="A_total_of">
+
+                <a href="#" class="btn btn-default settlement_a pull-right" role="button">去支付</a>
+
+
+                <div class="pull-right">
+                    总计：<span>￥</span><span class="check" >0.0</span>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/bootstrap.js"></script>
+</body>
+</html>
+

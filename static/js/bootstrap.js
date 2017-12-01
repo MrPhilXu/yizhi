@@ -334,7 +334,7 @@ if (typeof jQuery === 'undefined') {
   Carousel.TRANSITION_DURATION = 600
 
   Carousel.DEFAULTS = {
-    interval: 5000,
+    interval: 3000,
     pause: 'hover',
     wrap: true,
     keyboard: true
@@ -2375,3 +2375,140 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
+
+  //SHOPPING CART FUNCTION
+
+$(window).ready(function() {
+    var childL = 0;
+    childL = $('.checkbox_child').length;
+    $('.quantity').text(childL);
+
+
+
+    // 显示隐藏删除按钮
+    var delete_value = true;
+    $('.the_editor').click(function() {
+        if (delete_value) {
+            $('.goods_delete').show();
+            delete_value = false;
+        } else {
+            $('.goods_delete').hide();
+            delete_value = true;
+        }
+    })
+
+    // 删除按钮删除本身
+    $('.goods_delete').click(function() {
+        var s = $('.goods_delete').index(this);
+        $('.goods_boxs').eq(s).remove();
+
+        // // 点击删除计算去结算个数
+        // var childL = $('.checkbox_child:checked').length;
+        // $('.number_geshu').text(childL);
+
+        // 重新计算价格
+        unitprice_zong = 0;
+        if ($('.goods_boxs').length > 0) {
+            $('.checkbox_child').each(function() {
+                if ($(this).is(':checked')) {
+                    var zzyxx = parseInt($(this).parent().parent().find('div').find('.c_unitprice').text());
+                    unitprice_zong += zzyxx;
+                }
+                $('.check').text(unitprice_zong);
+            })
+        } else {
+            unitprice_zong = 0;
+            $('.check').text(unitprice_zong);
+            $('.checkbox_all').prop('checked', false);
+        }
+        childL = $('.checkbox_child').length;
+        $('.quantity').text(childL);
+
+    })
+
+    // 一键全选/全不选
+    // .prop("checked", true);
+    var unitprice_zong = 0; //总价
+    var childL = 0; //个数
+    $('.checkbox_all').click(function() {
+        if ($(this).is(":checked")) {
+            // 全选
+            $('.checkbox_child').prop("checked", true);
+            // 全选改变结算背景色
+            $('.settlement_a').css({'background':'red','pointer-events':'auto','cursor':'pointer','opacity': '1'});
+            // // 总个数
+            // childL = $('.checkbox_child').length;
+            // $('.number_geshu').text(childL);
+            // 计算总价
+            unitprice_zong = 0;
+            $('.checkbox_child').each(function() {
+                var hh = parseInt($(this).parent().parent().find('div').find('.c_unitprice').text());
+                unitprice_zong += hh;
+            })
+            $('.check').text(unitprice_zong);
+
+        } else {
+            // 全不选
+            $('.checkbox_child').prop("checked", false);
+            // 按钮变色
+            $('.settlement_a').css({'background':'#316CEB','pointer-events':'none','cursor':'not-allowed','opacity': '.65'});
+            // 总个数
+            // childL = 0;
+            // $('.number_geshu').text(childL);
+            // 计算总价
+            unitprice_zong = 0;
+            $('.check').text(unitprice_zong);
+        }
+    })
+
+    var all_btn = 0; //被打勾的复选框个数
+    //点击子按钮事件
+    $('.checkbox_child').click(function() {
+        // 按钮变色
+        if ($('.checkbox_child').is(':checked')) {
+            $('.settlement_a').css({'background':'red','pointer-events':'auto','cursor':'pointer','opacity': '1'});
+        } else {
+            // 按钮变色
+            $('.settlement_a').css({'background':'#316CEB','pointer-events':'none','cursor':'not-allowed','opacity': '.65'});
+        }
+
+        // 少一个不全选 全在就全选
+        var chang_child = $('.checkbox_child').length;
+        $('.checkbox_child').each(function() {
+            if ($(this).is(':checked')) {
+                all_btn++;
+            } else {
+                all_btn--;
+            }
+        })
+
+        if (all_btn == chang_child) {
+            $('.checkbox_all').prop('checked', true);
+            all_btn = 0;
+        } else {
+            $('.checkbox_all').prop('checked', false);
+            all_btn = 0;
+        }
+
+        //点击是重新计算总价
+        unitprice_zong = 0;
+        $('.checkbox_child').each(function() {
+            if ($(this).is(':checked')) {
+                var zzxx = parseInt($(this).parent().parent().find('div').find('.c_unitprice').text());
+                unitprice_zong += zzxx;
+            }
+            $('.check').text(unitprice_zong);
+        })
+    })
+
+
+})
+
+function showPic(whichpic) {
+    var source = whichpic.getAttribute("href");
+    var placeholder = document.getElementById("placeholder");
+    placeholder.setAttribute("src",source);
+    var text = whichpic.getAttribute("title");
+    var description = document.getElementById("description");
+    description.firstChild.nodeValue = text;
+}

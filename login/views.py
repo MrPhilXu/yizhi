@@ -9,14 +9,14 @@ from django.views.generic.base import View
 
 from utils.email_send import send_register_email
 from .forms import loginForm,registerForm,forgetForm
-from .models import UserProfile,EmailVerifyRecord
+from login.models import UserProfile,EmailVerifyRecord
 
 
-def index(request):
-    return render(request,"index.html")
+'''def index(request):
+    return render(request,"index.html")'''
 
-def liuyan(request):
-	return render(request,"liuyanban.html")
+def categories(request):
+	return render(request,"categories.html")
 
 class CustomBackend(ModelBackend):
 	def authenticate(self,username=None,password=None,**kwargs):
@@ -133,15 +133,49 @@ class ResetView(View):
 				email = record.email
 				return render(request,"password_reset.html",{"email":email})
 		else:
-			return render(request,"404.html")#lianjie shi xiao
+			return render(request,"404.html")#error
 		return render(request,"login.html")
 
 
-def djread(request):
-	return render(request,"djread.html")
+def shoppingcart(request):
+	return render(request,"shoppingcart.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def djsearch(request):
 	return render(request,"djsearch.html")
+
+
 
 def user(request):
 	return render(request,"user.html")
