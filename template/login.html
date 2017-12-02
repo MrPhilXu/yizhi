@@ -31,18 +31,23 @@
             </div>
 
             <hr>
-            <div class="login-form tab-content">
+            
+            <div class="login-form tab-content  ">
+                    <form  action="/login/" method="post" >
                 <div role="tabpanel" class="tab-pane fade in active" id="sign">
-                    <div class="control-group">
+                        
+                    <div class="control-group {% if login_form.errors.username %}errorput{% endif %}">
                         <input type="text" class="login-field" value="" placeholder="用户名/邮箱" id="login-name">
                         <label class="login-field-icon fui-user" for="login-name"></label>
                     </div>
 
-                    <div class="control-group">
+                    <div class="control-group {% if login_form.errors.password %}errorput{% endif %}">
                         <input type="password" class="login-field" value="" placeholder="密码" id="login-pass">
                         <label class="login-field-icon fui-lock" for="login-pass"></label>
 
                     </div>
+                    <div class="error btns login-form-tips" id="jsLoginTips">{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</div>
+                   
                     <div class="checkbox">
                         <label>
                             <input type="checkbox">下次自动登录
@@ -53,9 +58,13 @@
                     <a class="login-link" href="#">忘记密码?</a>
                     <a  class="login-link"href="{% url 'register' %}">还没有账号？</a>
                 </div>
+                {% csrf_token %}
+            </form>
+                
 
 
             </div>
+            
         </div>
     </div>
 </div>

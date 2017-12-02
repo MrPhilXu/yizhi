@@ -34,22 +34,32 @@
 
 
             <hr>
+            <form id="email_register_form" role="form" action="/register/" method="post">
             <div class="login-form ">
 
                 <div role="tabpanel" id="register">
-                    <div class="control-group">
+                        
+                  <!--  <div class="control-group {% if register_form.errors.email %}errorput{% endif %}">
                         <input type="text" class="login-field" value="" placeholder="请输入用户名" id="register-name">
                         <label class="login-field-icon fui-user" for="register-name"></label>
-                    </div>
-                    <div class="control-group">
-                        <input type="email" class="login-field" value="" placeholder="请输入邮箱" id="e-mail">
-                        <label class="login-field-icon fui-user" for="e-mail"></label>
+                    </div>-->
+                    <div class="control-group {% if register_form.errors.email %}errorput{% endif %}">
+                        <input name="email" type="text" class="login-field" value="" placeholder="请输入邮箱" id="id_email">
+                        
 
                     </div>
-                    <div class="control-group">
-                        <input type="password" class="login-field" value="" placeholder="请输入密码（不少于6位）" id="register-pass">
+                    <div class="control-group {% if register_form.errors.password %}errorput{% endif %}">
+                        <input type="password" class="login-field" name="password" id="password" value="" placeholder="请输入密码（不少于6位）" >
                         <label class="login-field-icon fui-lock" for="register-pass"></label>
 
+                    </div>
+                    <div  class="control-group captcha1  {% if register_form.errors.captcha %}errorput{% endif %}">
+                            
+                    <label><P>驗&nbsp;證&nbsp;码</label>{{ register_form.captcha }}
+                    </div>
+                    <div class="error btns" id="jsEmailTips">{% for key,error in register_form.errors.items %}{{ error }}{% endfor %}{{ msg }}
+                    </div>
+                    <div class="auto-box marb8">
                     </div>
 
                     <div class="checkbox">
@@ -57,8 +67,12 @@
                             <input type="checkbox">我同意规定的 <a href="#">服务条件</a> 和 <a href="#">隐私权政策</a>
                         </label>
                     </div>
-                    <a class="btn btn-primary btn-large btn-block" href="#">创建用户</a>
+                    
+                    <input type="submit" class="btn btn-primary btn-large btn-block" href="#"value="注册并登录"/> 
+                    {% csrf_token %}
                 </div>
+                
+            </form>
             </div>
         </div>
     </div>

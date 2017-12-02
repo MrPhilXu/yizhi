@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^shoppingcart/',shoppingcart,name="shoppingcart"),
     url('^login/$',loginView.as_view(),name="login"),
     url('^register/$',registerView.as_view(),name="register"),
+    url(r'^captcha/',include('captcha.urls')),
+    url(r'^active/(?P<active_code>.*)/$',ActiveUserView.as_view(),name="user_active"),
 
 
 ]
