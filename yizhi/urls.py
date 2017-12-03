@@ -16,7 +16,7 @@ Including another URLconf
 from django.views.generic import TemplateView
 from django.conf.urls import url,include
 import xadmin
-from login.views import categories,ActiveUserView,loginView,CustomBackend,registerView
+from login.views import categories,ActiveUserView,loginView,CustomBackend,registerView,ForgetPwdView,ResetView
 from login.views import loginView,user_login,ForgetPwdView,shoppingcart,register_success,email_send
 
 
