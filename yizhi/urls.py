@@ -17,7 +17,7 @@ from django.views.generic import TemplateView
 from django.conf.urls import url,include
 import xadmin
 from login.views import categories,ActiveUserView,loginView,CustomBackend,registerView
-from login.views import loginView,user_login,ForgetPwdView,shoppingcart
+from login.views import loginView,user_login,ForgetPwdView,shoppingcart,register_success,email_send
 
 
 
@@ -32,6 +32,9 @@ urlpatterns = [
     url('^register/$',registerView.as_view(),name="register"),
     url(r'^captcha/',include('captcha.urls')),
     url(r'^active/(?P<active_code>.*)/$',ActiveUserView.as_view(),name="user_active"),
+    url(r'^active/(?P<active_code>.*)/$',ActiveUserView.as_view(),name="user_active"),
+    url(r'^register_success/$',register_success,name="register_success"),
+    url(r'^email_send/$',email_send,name="email_send"),
 
 
 ]

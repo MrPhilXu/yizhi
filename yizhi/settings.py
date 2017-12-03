@@ -134,3 +134,6 @@ EMAIL_HOST_USER ="djangoproject@sina.com"
 EMAIL_HOST_PASSWORD = "admin123"
 EMAIL_USE_TLS=False
 EMAIL_FROM = "djangoproject@sina.com"
+
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+CAPTCHA_IMAGE_SIZE = (100, 30)

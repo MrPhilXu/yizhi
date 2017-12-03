@@ -56,6 +56,8 @@
                     <div  class="control-group captcha1  {% if register_form.errors.captcha %}errorput{% endif %}">
                             
                     <label><P>驗&nbsp;證&nbsp;码</label>{{ register_form.captcha }}
+
+                        
                     </div>
                     <div class="error btns" id="jsEmailTips">{% for key,error in register_form.errors.items %}{{ error }}{% endfor %}{{ msg }}
                     </div>
