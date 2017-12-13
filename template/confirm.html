@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Form wizard (using tabs) - Bootstrap.cn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/update.css" rel="stylesheet">
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<body>
+<div class="container">
+    <div class="row">
+        <section>
+            <div class="wizard">
+                <div class="wizard-inner">
+                    <div class="connecting-line"></div>
+                    <ul class="nav nav-tabs" role="tablist">
+
+                        <li role="presentation" class="active">
+                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                            <span class="round-tab">
+                                <p>1</p>
+                            </span>
+                            </a>
+                            <p class="text-center" style="margin-bottom: 20px;">填写信息</p>
+                        </li>
+
+                        <li role="presentation" class="disabled">
+                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                            <span class="round-tab">
+                                <p>2</p>
+                            </span>
+                            </a>
+                            <p class="text-center" style="margin-bottom: 20px;">确认订单</p>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                            <span class="round-tab">
+                                <p>3</p>
+                            </span>
+                            </a>
+                            <p class="text-center" style="margin-bottom: 20px;">支付</p>
+                        </li>
+
+                        <li role="presentation" class="disabled">
+                            <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-ok"></i>
+                            </span>
+                            </a>
+                            <p class="text-center" style="margin-bottom: 20px;">完成订单</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <form role="form" class="sure">
+                    <div class="tab-content">
+
+                        <div class="tab-pane active" role="tabpanel" id="step1">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">收件人信息</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal">
+
+                                        <div class="form-group">
+                                            <label for="name" class="col-sm-2 control-label">姓名<i style="color:red;"> *</i></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="name" placeholder="请输入收件人姓名" >
+                                            </div>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-group">
+                                            <label for="phone" class="col-sm-2 control-label">手机<i style="color:red;"> *</i></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="phone" placeholder="请输入收件人手机号码">
+                                            </div>
+                                        </div>
+
+                                        <br/>
+
+                                        <label for="area" class="col-sm-2 control-label">所在地区<i style="color:red;"> *</i></label>
+                                        <div id="area"></div>
+
+                                        <br/>
+
+                                        <div class="form-group">
+                                            <label for="address" class="col-sm-2 control-label">详细地址<i style="color:red;">*</i></label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="address" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码等信息">
+                                            </div>
+                                        </div>
+
+                                        <br/>
+
+                                        <div class="form-group">
+                                            <label for="zip" class="col-sm-2 control-label">邮政编码</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="zip" placeholder="请输入邮政编码" >
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> 设为常用地址
+                                            </label>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <ul class="list-inline pull-right">
+                                <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane" role="tabpanel" id="step2">
+
+
+                            <div class="col-lg-6">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">收货人信息</h3>
+                                    </div>
+
+
+                                    <table class="table table-bordered table-hover">
+                                        <tbody>
+                                        <tr>
+                                            <th>地址</th><td>安徽省合肥市经济技术开发区紫云路292号</td>
+                                        </tr>
+                                        <tr>
+                                            <th>联系电话</th><td>177 4321 9876</td>
+                                        </tr>
+                                        <tr>
+                                            <th>收件人</th><td>王小明</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">商品信息</h3>
+                                    </div>
+                                    <div class="panel-body ">
+                                        <div class="col-lg-3">
+                                            <img src="/static/img/mindbeagle.jpg">
+                                        </div>
+                                        <div class="col-lg-9">
+
+                                            <table class="table table-bordered table-hover">
+                                                <tbody>
+                                                <tr>
+                                                    <th>商品名</th><td>"MindBeagle" 脑机接口系统</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>商品编号</th><td>AT10022017136</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>数量</th><td>1件</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+
+
+                                            <p class="pull-right">小计 ： ￥20</p>
+                                        </div>
+                                        <br/>
+                                        <div class="col-lg-3">
+                                            <img src="/static/img/mindbeagle.jpg">
+                                        </div>
+                                        <div class="col-lg-9">
+
+                                            <table class="table table-bordered table-hover">
+                                                <tbody>
+                                                <tr>
+                                                    <th>商品名</th><td>"MindBeagle" 脑机接口系统</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>商品编号</th><td>AT10022017136</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>数量</th><td>1件</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+
+
+                                            <p class="pull-right">小计 ： ￥20</p>
+                                        </div>
+                                        <br/>
+
+
+
+                                        <div class="altogether pull-right">
+                                            <p>总计 ： ￥40</p>
+                                            <p>邮费 ： ￥10</p>
+                                            <p>保险 ： ￥12</p>
+                                            <hr/>
+                                            <p>应付款 ： ￥50</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <ul class="list-inline pull-right">
+                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane" role="tabpanel" id="step3">
+                            <div class="pay">
+
+                                <!-- Nav tabs -->
+                                <ul role="tablist">
+
+
+                                    <li role="presentation" class="active"><a href="#A" aria-controls="A" role="tab" data-toggle="tab"><img src="img/bank.png">网上银行</a></li>
+                                    <li role="presentation"><a href="#B" aria-controls="B" role="tab" data-toggle="tab"><img src="img/weixin.png">微信支付</a></li>
+                                    <li role="presentation"><a href="#C" aria-controls="C" role="tab" data-toggle="tab"><img src="img/zhifubao.png">支付宝支付</a></li>
+                                    <li role="presentation">
+                                        <a href="#D" aria-controls="D" role="tab" data-toggle="tab"><img src="/static/img/pay.png">货到付款</a></li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="A">啊</div>
+                                    <div role="tabpanel" class="tab-pane" id="B">b</div>
+                                    <div role="tabpanel" class="tab-pane" id="C">C</div>
+                                    <div role="tabpanel" class="tab-pane" id="D">de</div>
+                                </div>
+
+                            </div>
+
+                            <ul class="list-inline pull-right">
+                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                <li><button type="button" class="btn btn-default next-step">Skip</button></li>
+                                <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane" role="tabpanel" id="complete">
+                            <h3>Complete</h3>
+                            <p>You have successfully completed all steps.</p>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/confirm.js"></script>
+</body>
+</html>

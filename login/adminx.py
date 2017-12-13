@@ -3,7 +3,7 @@
 
 #Register your models here.
 import xadmin
-from .models import UserProfile,EmailVerifyRecord
+from .models import UserProfile,EmailVerifyRecord,feedback
 from xadmin import views
 
 class BaseSetting(object):
@@ -28,9 +28,16 @@ class EmailVerifyRecordAdmin(object):
 	list_filter = ['code','send_type','send_time']
 
 
+class feedbackAdmin(object):
+    list_display = ['xingming','jianyi','emailfeedback']
+search_fields = ['xingming','jianyi','emailfeedback']
+list_filter = ['xingming','jianyi','emailfeedback']
+  
+
 xadmin.site.unregister(UserProfile)
 xadmin.site.register(UserProfile,UserProfileAdmin)
 xadmin.site.register(EmailVerifyRecord,EmailVerifyRecordAdmin)
+xadmin.site.register(feedback,feedbackAdmin)
 xadmin.site.register(views.BaseAdminView,BaseSetting)
 xadmin.site.register(views.CommAdminView,GlobalSettings)
 

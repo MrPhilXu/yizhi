@@ -39,23 +39,23 @@
 
                 <div role="tabpanel" id="register">
                         
-                  <!--  <div class="control-group {% if register_form.errors.email %}errorput{% endif %}">
+                <!-- <div class="control-group {% if register_form.errors.email %}errorput{% endif %}">
                         <input type="text" class="login-field" value="" placeholder="请输入用户名" id="register-name">
                         <label class="login-field-icon fui-user" for="register-name"></label>
-                    </div>-->
+                    </div> -->
                     <div class="control-group {% if register_form.errors.email %}errorput{% endif %}">
                         <input name="email" type="text" class="login-field" value="" placeholder="请输入邮箱" id="id_email">
                         
 
                     </div>
                     <div class="control-group {% if register_form.errors.password %}errorput{% endif %}">
-                        <input type="password" class="login-field" name="password" id="password" value="" placeholder="请输入密码（不少于6位）" >
+                        <input type="password" class="login-field" name="password" id="password" value="" placeholder="请输入密码（不少于5位）" >
                         <label class="login-field-icon fui-lock" for="register-pass"></label>
 
                     </div>
                     <div  class="control-group captcha1  {% if register_form.errors.captcha %}errorput{% endif %}">
                             
-                    <label><P>驗&nbsp;證&nbsp;码</label>{{ register_form.captcha }}
+                        验证码 {{ register_form.captcha }}
 
                         
                     </div>
@@ -66,7 +66,7 @@
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox">我同意规定的 <a href="#">服务条件</a> 和 <a href="#">隐私权政策</a>
+                            <input type="checkbox" required="required">我同意规定的 <a href="#">服务条件</a> 和 <a href="#">隐私权政策</a>
                         </label>
                     </div>
                     

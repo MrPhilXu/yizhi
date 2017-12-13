@@ -34,3 +34,17 @@ class EmailVerifyRecord(models.Model):
 		verbose_name_plural = verbose_name
 	def __unicode__(self):
 		return '{0}({1})'.format(self.code,self.email)
+
+
+class feedback(models.Model):
+    jianyi = models.CharField(max_length=200,verbose_name=u"反馈")
+    xingming = models.CharField(max_length=10,verbose_name=u"姓名")
+    emailfeedback = models.EmailField(max_length=50,verbose_name=u"邮箱")
+    class Meta:
+	    verbose_name = u"用户反馈"
+	    verbose_name_plural = verbose_name
+    def  __unicode__(self):
+    	return self.username
+
+
+

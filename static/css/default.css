@@ -279,7 +279,7 @@ color: #777;
 text-align: center;
 }
 .control-group {
-margin-bottom: 11px;
+margin-bottom: 10px;
 }
 
 input {
@@ -350,4 +350,10 @@ form {
 	position: absolute;
 	margin-top: 4px \9;
 	margin-left: -135px;
+}
+
+.nav-tabs {
+	letter-spacing: 15px;
+	font-size: 35px;
+	color: #2880ff;
 }

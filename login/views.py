@@ -8,8 +8,8 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from utils.email_send import send_register_email
-from .forms import loginForm,registerForm,forgetForm
-from login.models import UserProfile,EmailVerifyRecord
+from .forms import loginForm,registerForm,forgetForm,feedbackForm
+from login.models import UserProfile,EmailVerifyRecord,feedback
 
 
 '''def index(request):
@@ -17,6 +17,23 @@ from login.models import UserProfile,EmailVerifyRecord
 
 def categories(request):
 	return render(request,"categories.html")
+
+def FAQ(request):
+    	return render(request,"FAQ.html")
+
+class feedback(View):
+    def get(self,request):
+    	return render(request,"feedback.html")
+	def post(self,request):
+		feedback_form = feedbackForm(request.POST)
+		if feedback_form.is_valid():
+
+			feedback = feedback()
+			feedback.xingming = xingming
+			feedback.emailfeedback   = emailfeedback
+			feedback.jianyi = jianyi
+			feedback.save()	
+			return render(request,"index.html")
 
 class CustomBackend(ModelBackend):
 	def authenticate(self,username=None,password=None,**kwargs):

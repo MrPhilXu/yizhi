@@ -15,3 +15,8 @@ class registerForm(forms.Form):
 class forgetForm(forms.Form):
 	email = forms.EmailField(required=True)
 	captcha = CaptchaField(error_messages={"invalid":"验证码错误！"})
+
+class feedbackForm(forms.Form):
+	jianyi = forms.CharField(required=True)
+	xingming = forms.CharField(required=True)
+	emailfeedback = forms.EmailField(required=True)
