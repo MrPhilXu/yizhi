@@ -18,7 +18,7 @@ class Banner(models.Model):
 
 class AboutPLat(models.Model):
     aboutplat = models.TextField(verbose_name=u"關於平臺")
-    image = models.ImageField(upload_to = "banner/%y/%m",verbose_name=u"圖片",max_length = 100)
+    image = models.ImageField(upload_to = "plat/%y/%m",verbose_name=u"圖片",max_length = 100)
     add_time = models.DateField(default=datetime.now,verbose_name=u"添加時間")        
 
     class Meta:
@@ -26,6 +26,22 @@ class AboutPLat(models.Model):
         verbose_name_plural = verbose_name
 
 class MainTechnology(models.Model):
-    pass
+    technology = models.TextField(verbose_name=u"科技介紹")
+    image = models.ImageField(upload_to = "technologyes/%y/%m",verbose_name=u"圖片",max_length = 100)
+    add_time = models.DateField(default=datetime.now,verbose_name=u"添加時間")        
+
+    class Meta:
+        verbose_name=u"科技介紹"
+        verbose_name_plural = verbose_name
+
+
+class Goods(models.Model):
+    new_goods_url = models.URLField(max_length = 200,verbose_name=u"最新成果") 
+    recommend_url = models.URLField(max_length = 200,verbose_name=u"精品推薦")
+    hot_goods_url = models.URLField(max_length = 200,verbose_name=u"最熱商品") 
+
+    class Meta:
+        verbose_name=u"瀏覽商品"
+        verbose_name_plural = verbose_name     
 
 
