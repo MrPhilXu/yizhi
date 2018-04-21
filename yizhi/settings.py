@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     #'reversion',
     'captcha',
     'utils',
+    'about',
+    'introduction',
+    'mainnews',
+    'transaction'
    
 ]
 

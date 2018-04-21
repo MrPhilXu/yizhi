@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>线上成果交易平台</title>
+    <!-- Bootstrap -->
+
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!--navigation-->
+    <div class="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-offset-3">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-navbar">
+                            <span class="sr-only">Togggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                            <a href="{% url 'index' %}" class="navbar-brand">线上科技成果交易平台</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="demo-navbar">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="{% url 'index' %}">首页</a></li>
+                                <li><a href="{% url 'categories' %}">成果转移</a></li>
+                                <li><a href="{% url 'news' %}">新闻中心</a></li>
+                                <li><a href="{% url 'FAQ' %}">关于</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                {% block login_css %}
+                                <li>
+
+
+                                    <div class="d6">
+                                        <form>
+                                            <input type="text" placeholder="搜索从这里开始...">
+                                            <button type="submit"></button>
+                                        </form>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <a href="{% url 'shoppingcart' %}" type="button">
+                                        <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'login' %}" type="button">
+                                    登录
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'register' %}" type="button">
+                                    注册
+                                </a>
+                                </li>
+                                {% endblock %}
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- col-sm -->
+                </div>
+                <!--  row -->
+            </div>
+            <!-- contaioner -->
+        </nav>
+    </div>
+
+
+    <!--底栏-->
+    <footer class="help-center">
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h4>加入我们</h4>
+                    <p>
+                        QQ:762634089<br> email:762634089@qq.com
+                        <br>
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h4>有用链接</h4>
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h4>实时通讯</h4>
+                    <form class="form" role="form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="input-group">
+                                    <label class="sr-only" for="subscribe-email">请输入你的要求...</label>
+                                    <input type="email" class="form-control" id="subscribe-email" placeholder="请输入你的要求...">
+                                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-success">发 送</button>
+                      </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="copyright ">
+            <span>Copyright © 2017 </span>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.js"></script>
+</body>
+
+</html>

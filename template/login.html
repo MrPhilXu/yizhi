@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,61 +22,68 @@
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
 
-<div class="container" id="particles-js" >
+    <div class="container" id="particles-js">
 
-    <div class="login" >
-        <div class="login-screen">
-            <div  role="tablist">
-                <div role="presentation" class="active nav nav-tabs"><p href="#sign" aria-controls="sign" role="tab" data-toggle="tab">登陆</p></div>
+        <div class="login">
+            <div class="login-screen">
+                <div role="tablist">
 
-            </div>
-
-            <hr>
-            
-            <div class="login-form tab-content  ">
-                    <form  action="/login/" method="post" >
-                <div role="tabpanel" class="tab-pane fade in active" id="sign">
-                        
-                    <div class="control-group {% if login_form.errors.username %}errorput{% endif %}">
-                        <input name="username" id="username" type="text" class="login-field" value="" placeholder="用户名/邮箱" id="login-name">
-                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    <div role="presentation" class="active nav nav-tabs">
+                        <p href="#sign" aria-controls="sign" role="tab" data-toggle="tab">登陆</p>
                     </div>
 
-                    <div class="control-group {% if login_form.errors.password %}errorput{% endif %}">
-                        <input name="password" id="password" type="password" class="login-field" value="" placeholder="密码" id="login-pass">
-                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
 
-                    </div>
-                    <div class="error btns login-form-tips" id="jsLoginTips">{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</div>
-                   
-                    <div class="checkbox">
-                        <label>
+                <hr>
+
+                <div class="login-form tab-content  ">
+                    <form action="/login/" method="post">
+                        <div role="tabpanel" class="tab-pane fade in active" id="sign">
+
+                            <div class="control-group {% if login_form.errors.username %}errorput{% endif %}">
+                                <input name="username" id="username" type="text" class="login-field" value="" placeholder="用户名/邮箱" id="login-name">
+                                <label class="login-field-icon fui-user" for="login-name"></label>
+                            </div>
+
+                            <div class="control-group {% if login_form.errors.password %}errorput{% endif %}">
+                                <input name="password" id="password" type="password" class="login-field" value="" placeholder="密码" id="login-pass">
+                                <label class="login-field-icon fui-lock" for="login-pass"></label>
+
+                            </div>
+                            <div class="error btns login-form-tips" id="jsLoginTips">{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</div>
+
+                            <div class="checkbox">
+                                <label>
                             <input type="checkbox">下次自动登录
                         </label>
 
-                    </div>
-                    <input type="submit" class="btn btn-primary btn-large btn-block" value="确 定"/>
-                    <a class="login-link" href="#">忘记密码?</a>
-                    <a  class="login-link"href="{% url 'register' %}">还没有账号？</a>
-                </div>
-                {% csrf_token %}
-            </form>
-                
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-large btn-block" value="确 定" />
+                            <a class="login-link" href="#">忘记密码?</a>
+                            <a class="login-link" href="{% url 'register' %}">还没有账号？</a>
+                        </div>
+                        {% csrf_token %}
+                    </form>
 
+
+
+
+                </div>
 
             </div>
-            
         </div>
     </div>
-</div>
 
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/static/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

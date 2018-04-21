@@ -158,6 +158,10 @@ def shoppingcart(request):
 	return render(request,"shoppingcart.html")
 
 
+def presscenter(request):
+    return render(request,"shoppingcart.html")	
+
+
 
 
 

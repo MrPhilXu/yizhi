@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,11 +14,10 @@
     <link href="/static/css/update.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
     <style>
-        body{    height: 750px;
-            background-image: linear-gradient(to top, #a8edea 0%, #ffffff 100%);}
-
-
-
+        body {
+            height: 750px;
+            background-image: linear-gradient(to top, #a8edea 0%, #ffffff 100%);
+        }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -27,194 +27,199 @@
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
 
-<div class="navigation above">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-offset-3">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-navbar">
+    <div class="navigation above">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-offset-3">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-navbar">
                             <span class="sr-only">Togggle Navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="{% url 'index' %}" class="navbar-brand">线上科技成果交易平台</a>
-                    </div>
+                            <a href="{% url 'index' %}" class="navbar-brand">线上科技成果交易平台</a>
+                        </div>
 
-                    <div class="collapse navbar-collapse" id="demo-navbar">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="{% url 'index' %}">首页</a></li>
-                            <li><a href="{% url 'categories' %}">成果转移</a></li>
-                            <li><a href="#">新闻中心</a></li>
-                            <li><a href="{% url 'FAQ' %}">关于</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
+                        <div class="collapse navbar-collapse" id="demo-navbar">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="{% url 'index' %}">首页</a></li>
+                                <li><a href="{% url 'categories' %}">成果转移</a></li>
+                                <li><a href="{% url 'news' %}">新闻中心</a></li>
+                                <li><a href="{% url 'FAQ' %}">关于</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
 
-                            <li>
+                                <li>
 
 
-                                <div class="d6">
-                                    <form>
-                                        <input type="text" placeholder="搜索从这里开始...">
-                                        <button type="submit"></button>
-                                    </form>
-                                </div>
+                                    <div class="d6">
+                                        <form>
+                                            <input type="text" placeholder="搜索从这里开始...">
+                                            <button type="submit"></button>
+                                        </form>
+                                    </div>
 
-                            </li>
-                            <li><a href="{% url 'shoppingcart' %}" type="button" >
-                                <span class="fa fa-shopping-cart" aria-hidden="true"></span>
-                            </a></li>
-                            <li>
-                                <a href="{% url 'login' }" type="button" >
+                                </li>
+                                <li>
+                                    <a href="{% url 'shoppingcart' %}" type="button">
+                                        <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'login' %}" type="button">
                                     登录
                                 </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'register' %}" type="button" >
+                                </li>
+                                <li>
+                                    <a href="{% url 'register' %}" type="button">
                                     注册
                                 </a>
-                            </li>
+                                </li>
 
-                        </ul>
+                            </ul>
 
-                    </div>
-                </div><!-- col-sm -->
-            </div><!--  row -->
-        </div><!-- contaioner -->
-    </nav>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-
-        <div class="col-lg-offset-2 col-lg-2">
-
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs " role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">关于我们</a></li>
-
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">免责声明</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">联系方式</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">加入我们</a></li>
-                <li><a href="{% url 'feedback' %}" role="tab" >反馈留言</a> </li>
-            </ul>
-
-            <!-- Tab panes -->
-
-
-        </div>
-
-        <div class="tab-content pull-left col-lg-6">
-            <div role="tabpanel" class="tab-pane card active" id="home">
-                <p>“易知”是一项针对在线科技成果交易平台设计与实现的网站系统，适用于需要对科技成果在线交易的企业或者个人，也同样适用于需要购买某项科技成果的公司或个人。</p>
-                <p>相对于传统的商场销售，“易知”可以将商品详细分类，为用户提供了更大的选择空间，而且通过前台的商品展示，可以使用户更好的了解商品，网站购物车的实现使顾客真正实现了足不出户，网上购物的目的。</p>
-                <p>从国外来看，以美国，英国为代表的在线科技成果交易平台已经取得了长足的发展。政府，企业，投资者等主体为科技成果的交易营造了协调配合，良性互动的良好氛围，而且交易的多样性使得交易者可以优中选优。
-                    然而，据统计，我国的科技成果转让率还不足10%，与发达国家30%的水平相比，我国的科技成果转让率明显较低。更重要的是，在线技术交易模块的平台建设尚未发展成熟。
-                    在这种情况下，我们的“易知”系统利用互联网开拓信息渠道，帮助企业及时调整加快科技成果的交易流程，协助投资者打开科技成果交易的信息门户成为解决信息流通不畅的有效方案。毫无疑问，“易知”的在线科技成果交易有利于企业科技成果的转换，提高企业或者投资者在相关行业的竞争力。
-                </p>
-            </div>
-            <div role="tabpanel" class="tab-pane  card" id="messages">
-                <h3 class="text-center">免责声明</h3><br/><br/>
-                <p>1. 对于使用、利用本商城平台从事的相关行为、商城平台中所涉信息等，用户应秉着诚实、守信、善意之理念进行，不得有恶意欺骗、欺诈之行为，亦不得故意或过失损害本平台的合法权益；</p>
-                <p>2.  凡是在本商城从事相关行为的企业、团体、单位、个人，均视为具备独立从事民事活动的资格，对于因物流服务（包括但不限于商品出现污染、变质、损坏、缺失、灭失、发货或交货迟延）等而造成用户的任何损失，本商城将尽量协调处理，非因商品质量问题本商城不承担任何责任；</p>
-                <p>3、  本商城有权对商品信息（包括但不限于商品价格、规格、种类、型号）进行调整，对于用户因商家之调整行为而遭受的损失，本商城不承担任何责任；</p>
-                <p>4、  用户应严格按照本商城服务协议从事相关行为，如服务协议发生变更、修正，用户应按变更、修正后的协议执行，本商城不因协议之变更、修正而承担任何责任；</p>
-                <p>5.  为全方位服务用户，本商城提供365天7X24小时客户服务，客服电话：【+009 000 999 0000】；</p>
-                <p>6、  易知拥有本商城平台网站内所有信息内容（除平台商家发布的商品信息外，包括但不限于文字、图片、软件、音频、视频）的版权。</p>
-            </div>
-            <div role="tabpanel" class="tab-pane  card" id="profile">
-                <ul style="font-weight: bold;">
-                    <li>如果你有需要推广的成果、产品</li>
-                    <li>如果在浏览网站的过程中遇到了问题</li>
-                    <li>如果... ...</li>
-                    <li>那么，您可以通过以下方式联系到我们：</li>
-                </ul>
-
-                <ul>
-                    <li>公司地址: 合肥市经开区紫云路 292 号</li>
-                    <li>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：230601</li>
-                    <li>公司电话:+001 333 000 1010</li>
-
-                    <li>客服热线:+009 000 999 0000</li>
-                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+002 666 000 2020</li>
-                    <li>电子邮箱:admin@company.com</li>
-                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@company.com</li>
-                </ul>
-
-            </div>
-            <div role="tabpanel" class="tab-pane text-center card" id="settings">
-                <h4 class="text-center">在这个地方，还有一群人和你一样。</h4>
-                <p>人们聚在一起，分享和学习数以百万计的共同兴趣,难道不是一件值得高兴的事吗？</p>
-                <p>欢迎你投递简历，递交申请，能够让我们认识你。我们会给你一片舞台，让你尽情展示你的才能。</p>
-                <a class="btn btn-success" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>职位申请入口</a>
-            </div>
-        </div>
-
-
-
-    </div>
-</div>
-
-<!--底栏-->
-<footer class="help-center">
-
-
-    <div class="container">
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <h4>加入我们</h4>
-                <p>
-                    QQ:762634089<br>
-                    email:762634089@qq.com<br>
-                </p>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <h4>有用链接</h4>
-                <ul class="list-inline">
-                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-
-
-                </ul>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <h4>实时通讯</h4>
-                <form class="form" role="form">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="input-group">
-                                <label class="sr-only" for="subscribe-email">请输入你的要求...</label>
-                                <input type="email" class="form-control" id="subscribe-email" placeholder="请输入你的要求...">
-                                <span class="input-group-btn">
-                        <button type="submit" class="btn btn-success">发 送</button>
-                      </span>
-                            </div>
                         </div>
                     </div>
-                </form>
-                <br />
+                    <!-- col-sm -->
+                </div>
+                <!--  row -->
             </div>
+            <!-- contaioner -->
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-offset-2 col-lg-2">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">关于我们</a></li>
+
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">免责声明</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">联系方式</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">加入我们</a></li>
+                    <li><a href="{% url 'feedback' %}" role="tab">反馈留言</a> </li>
+                </ul>
+
+                <!-- Tab panes -->
+
+
+            </div>
+
+            <div class="tab-content pull-left col-lg-6">
+                <div role="tabpanel" class="tab-pane card active" id="home">
+                    <p>“易知”是一项针对在线科技成果交易平台设计与实现的网站系统，适用于需要对科技成果在线交易的企业或者个人，也同样适用于需要购买某项科技成果的公司或个人。</p>
+                    <p>相对于传统的商场销售，“易知”可以将商品详细分类，为用户提供了更大的选择空间，而且通过前台的商品展示，可以使用户更好的了解商品，网站购物车的实现使顾客真正实现了足不出户，网上购物的目的。</p>
+                    <p>从国外来看，以美国，英国为代表的在线科技成果交易平台已经取得了长足的发展。政府，企业，投资者等主体为科技成果的交易营造了协调配合，良性互动的良好氛围，而且交易的多样性使得交易者可以优中选优。 然而，据统计，我国的科技成果转让率还不足10%，与发达国家30%的水平相比，我国的科技成果转让率明显较低。更重要的是，在线技术交易模块的平台建设尚未发展成熟。 在这种情况下，我们的“易知”系统利用互联网开拓信息渠道，帮助企业及时调整加快科技成果的交易流程，协助投资者打开科技成果交易的信息门户成为解决信息流通不畅的有效方案。毫无疑问，“易知”的在线科技成果交易有利于企业科技成果的转换，提高企业或者投资者在相关行业的竞争力。
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane  card" id="messages">
+                    <h3 class="text-center">免责声明</h3><br/><br/>
+                    <p>1. 对于使用、利用本商城平台从事的相关行为、商城平台中所涉信息等，用户应秉着诚实、守信、善意之理念进行，不得有恶意欺骗、欺诈之行为，亦不得故意或过失损害本平台的合法权益；</p>
+                    <p>2. 凡是在本商城从事相关行为的企业、团体、单位、个人，均视为具备独立从事民事活动的资格，对于因物流服务（包括但不限于商品出现污染、变质、损坏、缺失、灭失、发货或交货迟延）等而造成用户的任何损失，本商城将尽量协调处理，非因商品质量问题本商城不承担任何责任；</p>
+                    <p>3、 本商城有权对商品信息（包括但不限于商品价格、规格、种类、型号）进行调整，对于用户因商家之调整行为而遭受的损失，本商城不承担任何责任；</p>
+                    <p>4、 用户应严格按照本商城服务协议从事相关行为，如服务协议发生变更、修正，用户应按变更、修正后的协议执行，本商城不因协议之变更、修正而承担任何责任；</p>
+                    <p>5. 为全方位服务用户，本商城提供365天7X24小时客户服务，客服电话：【+009 000 999 0000】；</p>
+                    <p>6、 易知拥有本商城平台网站内所有信息内容（除平台商家发布的商品信息外，包括但不限于文字、图片、软件、音频、视频）的版权。</p>
+                </div>
+                <div role="tabpanel" class="tab-pane  card" id="profile">
+                    <ul style="font-weight: bold;">
+                        <li>如果你有需要推广的成果、产品</li>
+                        <li>如果在浏览网站的过程中遇到了问题</li>
+                        <li>如果... ...</li>
+                        <li>那么，您可以通过以下方式联系到我们：</li>
+                    </ul>
+
+                    <ul>
+                        <li>公司地址: 合肥市经开区紫云路 292 号</li>
+                        <li>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：230601</li>
+                        <li>公司电话:+001 333 000 1010</li>
+
+                        <li>客服热线:+009 000 999 0000</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+002 666 000 2020</li>
+                        <li>电子邮箱:admin@company.com</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info@company.com</li>
+                    </ul>
+
+                </div>
+                <div role="tabpanel" class="tab-pane text-center card" id="settings">
+                    <h4 class="text-center">在这个地方，还有一群人和你一样。</h4>
+                    <p>人们聚在一起，分享和学习数以百万计的共同兴趣,难道不是一件值得高兴的事吗？</p>
+                    <p>欢迎你投递简历，递交申请，能够让我们认识你。我们会给你一片舞台，让你尽情展示你的才能。</p>
+                    <a class="btn btn-success" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>职位申请入口</a>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
-    <div class="copyright ">
-        <span>Copyright © 2017 </span>
-    </div>
-</footer>
+
+    <!--底栏-->
+    <footer class="help-center">
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/static/js/bootstrap.js"></script>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h4>加入我们</h4>
+                    <p>
+                        QQ:762634089<br> email:762634089@qq.com
+                        <br>
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h4>有用链接</h4>
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h4>实时通讯</h4>
+                    <form class="form" role="form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="input-group">
+                                    <label class="sr-only" for="subscribe-email">请输入你的要求...</label>
+                                    <input type="email" class="form-control" id="subscribe-email" placeholder="请输入你的要求...">
+                                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-success">发 送</button>
+                      </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="copyright ">
+            <span>Copyright © 2017 </span>
+        </div>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.js"></script>
 </body>
+
 </html>
