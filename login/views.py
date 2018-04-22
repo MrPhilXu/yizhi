@@ -162,7 +162,10 @@ def presscenter(request):
     return render(request,"shoppingcart.html")
 
 def feedbacksuccess(request):
-    return render(request,"send_successful.html")	
+    return render(request,"send_successful.html")
+
+def notice(request):
+    return render(request,"notice.html")		
 
 
 

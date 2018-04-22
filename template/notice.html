@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- <head> -->
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模态框</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script> -->
+<!-- </head> -->
+
+<body>
+    <p>
+        <a data-toggle="modal" data-target="#myModal">服务协议</a>
+    </p>
+    <p>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+ 点击此阅读服务协议
+ </button>
+    </p>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+ <span>×</span>
+ </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        服务协议
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p align="center">
+                        <textarea class="form-control" rows=3 readonly="true" /> 凡在本网站购买科技成果，购买前请与卖家商议，商议成功后采用一次性买断的方式，需签订三方协议，后期不涉及侵权行为，若未经允许私下购买，后期一切侵权后果由买家负责。
+                        </textarea>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <p align="center">
+                        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">确定</button> -->
+                        <a type="submit" href={% url 'shoppingcart' %} class="btn btn-primary btn-large btn-block" value="确 定" type="button">确定</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
