@@ -159,7 +159,40 @@ def shoppingcart(request):
 
 
 def presscenter(request):
-    return render(request,"shoppingcart.html")	
+    return render(request,"shoppingcart.html")
+
+def feedbacksuccess(request):
+    return render(request,"send_successful.html")	
+
+
+
+class IntroductionView(View):
+    def get(self,request):
+        current_page = "introduction"
+        return render(request,"index.html",{
+            "current_page":current_page
+        })
+
+class aboutView(View):
+    def get(self,request):
+        current_page = "about"
+        return render(request,"FAQ.html",{
+            "current_page":current_page
+        })
+
+class MainView(View):
+    def get(self,request):
+        current_page = "mainviews"
+        return render(request,"categories.html",{
+            "current_page":current_page
+        })
+
+class TransactionView(View):
+    def get(self,request):
+        current_page = "transaction"
+        return render(request,"shoppingcart.html",{
+            "current_page":current_page
+        })   	
 
 
 

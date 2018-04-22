@@ -12,7 +12,7 @@ class BaseSetting(object):
 
 class GlobalSettings(object):
 	site_title = u"后台管理系统"
-	site_footer = u""
+	site_footer = u"线上科技成果交易平台"
 	menu_style = "accordion"
 
 

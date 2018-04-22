@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,27 +19,28 @@
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body class="feedback">
 
-<div class="container-fluid">
-    <div class="row">
+    <div class="container-fluid">
+        <div class="row">
 
-        <h1 class="text-center" >反馈留言</h1>
-        <h4 class="text-center">感谢您花费几分钟在此填写反馈，以便我们为您提供更好的服务。 </h4>
-        <div class="panel panel-default">
-            <div class="panel-body">
-
-
+            <h1 class="text-center">反馈留言</h1>
+            <h4 class="text-center">感谢您花费几分钟在此填写反馈，以便我们为您提供更好的服务。 </h4>
+            <div class="panel panel-default">
+                <div class="panel-body">
 
 
-                <div >
-                    
+
+
+                    <div>
+
                         <h5>请您对我们的产品/服务的满意程度作出评价</h5>
-                        <ul >
-                            <li><input type="radio" name="view" id="excellent">
+                        <ul>
+                            <li><input type="radio" name="view" id="excellent" checked="checked">
                                 <label for="excellent">很棒⭐⭐⭐⭐⭐</label>
                             </li>
-                            <li><input type="radio" name="view" id="good" checked="checked">
+                            <li><input type="radio" name="view" id="good">
                                 <label for="good">还行⭐⭐⭐</label>
                             </li>
                             <li><input type="radio" name="view" id="neutral">
@@ -50,31 +52,33 @@
 
                         </ul>
                         <h5>如果你有独特的建议与想法，请在此处为我们留言...</h5>
-                    <form action="/feedback/" method="post" >
-                        <div role="tabpanel" class="tab-pane fade in active" id="feedback">
-                        <input placeholder="我建议..." type="text" class="jianyi" name="jianyi" id="jianyi" required=""/>
-                        <input type="text" class="login-field" name="xingming" id="xingming" placeholder="姓名" required="" />
-                        <input type="email" placeholder="邮箱" name="emailfeedback" id="emailfeedback" required=""/>
-                        <input type="submit" class="btn btn-primary btn-large btn-block" value="确 定"/>
-                        <a href="{% url 'index' %}" class="link pull-right">返回首页</a>
-                        </div>
-                        {% csrf_token %}
-                    </form>
+                        <form action="/feedback/" href="{% url 'index' %}" method="post">
+                            <div role="tabpanel" class="tab-pane fade in active" id="feedback">
+                                <input placeholder="我建议..." type="text" class="jianyi" name="jianyi" id="jianyi" required="" />
+                                <input type="text" class="login-field" name="xingming" id="xingming" placeholder="姓名" required="" />
+                                <input type="email" placeholder="邮箱" name="emailfeedback" id="emailfeedback" required="" />
+                                <!-- <input type="submit" href={% url 'index' %} class="btn btn-primary btn-large btn-block" value="确 定" /> -->
+                                <a type="submit" href={% url 'feedbach_success' %} class="btn btn-primary btn-large btn-block" value="确 定" type="button">确定</a>
+                                <a href="{% url 'index' %}" class="link pull-right">返回首页</a>
+                            </div>
+                            {% csrf_token %}
+                        </form>
+                    </div>
+
+
+
                 </div>
-
-
-
             </div>
+
         </div>
 
     </div>
 
-</div>
 
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/static/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.min.js"></script>
 </body>
+
 </html>

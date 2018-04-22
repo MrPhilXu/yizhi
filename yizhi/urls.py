@@ -17,7 +17,7 @@ from django.views.generic import TemplateView
 from django.conf.urls import url,include
 import xadmin
 from login.views import categories,ActiveUserView,loginView,CustomBackend,registerView,ForgetPwdView,ResetView
-from login.views import loginView,user_login,ForgetPwdView,shoppingcart,presscenter,register_success,email_send,FAQ,feedback
+from login.views import loginView,user_login,ForgetPwdView,shoppingcart,presscenter,register_success,email_send,FAQ,feedback,feedbacksuccess
 
 
 
@@ -38,6 +38,7 @@ urlpatterns = [
     url(r'^FAQ/$',FAQ,name="FAQ"),
     url(r'^feedback/$',feedback.as_view(),name="feedback"),
     url(r'^news/',presscenter,name="news"),
+    url(r'^feedback_success/',feedbacksuccess,name="feedbach_success"),
 
 
 ]
