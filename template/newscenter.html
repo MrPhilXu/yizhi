@@ -1,0 +1,160 @@
+<!DOCTYPE html> {% extends 'base.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News Theme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+{% block login_css %}
+
+<body>
+    <div class="responsive ad-sec">
+        <div class="container">
+            <img src="/static/img/responsive-ad.jpg" alt="ad">
+        </div>
+    </div> -->
+    <!-- End ad section -->
+    <section class="subscribe-sec" style="background:url(/static/img/subscribe.jpg)no-repeat;">
+        <div class="cover"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 subscribe">
+                    <h3>Subscribe to newsletter</h3>
+                    <h5>Sign up to our weekly newsletter and never miss an update from us !</h5>
+                    <div class="mail-sec">
+                        <form>
+                            <input type="email" placeholder="Your Email" class="form-control" required>
+                            <button class="btn submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <ul class="social-count">
+                        <li>
+                            <div class="facebook">
+                                <span>       
+        <h4>445K</h4>
+        <h5>Fans</h5>
+        </div>
+        </li>
+        <li>
+            <div class="youtube">
+                <span><i class="fab fa-youtube-square"></i></span>
+                                <h4>152K</h4>
+                                <h5>Fans</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="pop-posts">
+                            <h2>Popular Posts</h2>
+                            <div class="post-content small-post">
+                                <figure style="background:url(./img/tab4.jpg)no-repeat"></figure>
+                                <div class="content">
+                                    <a href="#">
+
+                                        <style>
+                                            h3 {
+                                                font-size: 25px;
+                                                color: black;
+                                            }
+                                        </style>
+                                        <h3 class="post-ttl">据物理学家组织网近日报道，美国卡耐基梅隆大学（CMU）科学家研发出一种在室温下呈液态的金属合金，并将其注入橡胶后制成像天然皮肤一样柔软和富有弹性的晶体管。发表在《先进科学》杂志上的这一最新成果预示着，这些软性材料或将……</h3>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-content small-post ">
+                                <figure style="background:url(./img/tab5.jpg)no-repeat "></figure>
+                                <div class="content ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 categories ">
+                        <h2>Categories</h2>
+                        <ul>
+                            <li><a href="# ">Business (3)</a></li>
+                            <li><a href="# ">Corporation (2)</a></li>
+                            <li><a href="# ">Critics (1)</a></li>
+                            <li><a href="# ">Digital Business (2)</a></li>
+                            <li><a href="# ">Beauty tips (7)</a></li>
+                            <li><a href="# ">Collection (7)</a></li>
+                            <li><a href="# ">Celebrity (7)</a></li>
+                            <li><a href="# ">Cooking (20)</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 instragram ">
+                        <h2>Instagram Feed</h2>
+                        <ul>
+                            <li>
+                                <figure style="background:url(/static/img/insta1.jpg)no-repeat "></figure>
+                            </li>
+                            <li>
+                                <figure style="background:url(/static/img/insta2.jpg)no-repeat "></figure>
+                            </li>
+                            <li>
+                                <figure style="background:url(/static/img/insta3.jpg)no-repeat "></figure>
+                            </li>
+                            <li>
+                                <figure style="background:url(/static/img/insta4.jpg)no-repeat "></figure>
+                            </li>
+                            <li>
+                                <figure style="background:url(/static/img/insta1.jpg)no-repeat "></figure>
+                            </li>
+                            <li>
+                                <figure style="background:url(/static/img/insta2.jpg)no-repeat "></figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyright ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-6 col-md-4 logo-side ">
+                        <img src="/static/img/logo.png " alt="logo ">
+                    </div>
+                    <div class="col-lg-6 col-md-8 ">
+                        <ul class="footer-menu ">
+                            <li>
+                                <a href="{% url 'index' %} ">Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'shoppingcart' %} ">shoppingcart</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'categories' %} ">categories</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'FAQ' %} ">contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript " src="/static/js/jquery.js "></script>
+    <script type="text/javascript " src="/static/js/bootstrap.min.js ">
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
+    <script type="text/javascript " src="/static/js/custom.js "></script>
+</body>
+{% endblock %}
+
+</html>

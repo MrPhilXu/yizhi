@@ -8,18 +8,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
     <!--   Le Styles  -->
     <link rel="stylesheet" href="/static/css/bootstrap.css" />
     <link rel="stylesheet" href="/static/css/custom.css" />
     <link rel="stylesheet" href="/static/css/font-awesome.css">
 
-
-
 </head>
 
 <body class="e-mail">
-
     <!-- Wrapper -->
     <div class="wrapper">
 
@@ -29,8 +25,10 @@
                     <div class="sign text-center">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                <h3>已收到你的反馈，非常感谢......</h3>
-                                <p><a href="{% url 'index' %}">返回首页</a> <span class="divider">|</span> <a href="{% url 'feedback' %}">继续反馈</a></p>
+                                <div style="margin:20px 50px 20px 250px">
+                                    <h3> 已收到你的反馈，非常感谢......</h3>
+                                    <p><a href=" {% url 'index' %} ">返回首页</a> <span class="divider ">|</span> <a href="{% url 'feedback' %} ">继续反馈</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>

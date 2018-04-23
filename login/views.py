@@ -159,7 +159,7 @@ def shoppingcart(request):
 
 
 def presscenter(request):
-    return render(request,"shoppingcart.html")
+    return render(request,"newscenter.html")
 
 def feedbacksuccess(request):
     return render(request,"send_successful.html")
