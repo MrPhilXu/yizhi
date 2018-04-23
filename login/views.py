@@ -165,7 +165,10 @@ def feedbacksuccess(request):
     return render(request,"send_successful.html")
 
 def notice(request):
-    return render(request,"notice.html")		
+    return render(request,"notice.html")	
+
+def payment(request):
+	return render(request,"payment.html")	
 
 
 
